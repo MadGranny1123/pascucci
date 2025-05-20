@@ -1,0 +1,677 @@
+@charset "utf-8";
+*{margin: 0px; padding: 0px;}
+ul{list-style: none;}
+a{color: black; text-decoration: none;}
+img{border: none; vertical-align: top;}
+/* Pretendard 폰트 */
+body {font-family: 'Pretendard', sans-serif;}
+a{text-decoration: none;color: inherit;font-family: 'Pretendard', sans-serif;}
+
+
+#header{
+    width: 100%;
+    background-color: rgba(255, 228, 196, 0.376);
+    position: absolute;left: 0; top: 0;
+    z-index: 5;
+}
+#header .drop_menu{
+    width: 100%; height: 150px;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+#header .drop_menu:hover{
+    height: 350px;
+    background-color: #e7bc94;
+}
+#header .menu{
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header h1 img{
+    width: 230px;
+    margin-left: 100px;
+}
+#header .gnb{
+    width: 60%; margin: 0 auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 135px
+}
+#header .gnb>li{
+    width: 250px; 
+    height: 100px;
+    margin-top: -50px;
+}
+#header .gnb>li:hover >a,
+#header .gnb .sub>li:hover a{
+    color: rgba(212, 52, 41, 0.759);
+    font-weight: bold;
+}
+#header .gnb>li>a{
+    color: rgb(131, 89, 60);
+}
+#header .gnb .sub{
+    width: 130px;
+    display: block;
+    text-align: left;
+    margin-left: 47px;
+}
+#header .gnb .sub>li{
+    font-size: 16px;
+    line-height: 35px;
+    text-align: center;
+}
+#header .gnb .sub>li>a{
+    color: rgb(177, 95, 68);
+    font-weight: bold;
+}
+
+
+#header .menu>p{
+    width: 150px; height: 40px;
+    line-height: 38px;
+    font-size: 20px;
+    font-weight: bold;
+    color: antiquewhite;
+    background-color: rgb(177, 95, 68);
+    text-align: center;
+    margin-right: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#header .menu>p:hover{
+    background-color:rgb(100, 66, 42);
+    color: rgb(239, 230, 230);
+}
+
+/* 이탈리아의 감각을 담은 파스쿠찌 */
+#section .brand{
+    margin-top: 150px;
+    width: 100%; height: 1080px;
+    background-image: url(../img/heritage/br_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content:flex-start;
+    position: relative;
+}
+#section .brand .br_text{
+    color: rgba(248, 239, 239, 1);
+    margin-top:105px; margin-left:97px;
+}
+#section .brand .br_text :first-child{
+    font-size: 35px;
+    font-weight: 500;
+}
+#section .brand .br_text h1{
+    font-size: 89px;
+    font-weight: 800;
+}
+#section .brand .br_text :last-child{
+    font-size: 26px;
+    font-weight: 300;
+}
+#section .brand .br_images .coffee{position:absolute; top:125px; left:1156px; z-index:2;}
+#section .brand .br_images .triangle{position:absolute; top:285px; left:1074px; z-index:1;}
+
+/* 파스쿠찌 역사 */
+#section .history{
+    width: 100%; height: 1080px;
+    position: relative;
+    color: rgba(68, 10, 10, 1);
+}
+#section .history h1{
+    position: absolute;;
+    font-size: 40px;
+    font-weight: 400;
+    top: 105px; left: 97px;
+}
+#section .history .hi_images{position:absolute; top:28%; left:8.4%; z-index:1; }
+#section .history ul{display: flex;}
+#section .history ul li{display: flex;}
+#section .history .hi_text li h2{
+    font-size: 16px;
+    font-weight: 900;
+}
+#section .history .hi_text li span{
+    font-size: 16px;
+    font-weight: 300;
+}
+#section .history .hi_text li p{
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 6px;
+}
+#section .history .hi_text > li:nth-of-type(1){
+    position:absolute; z-index:8;
+    top:300px; left:136px;
+}
+#section .history .hi_text > li:nth-of-type(1):hover{
+    box-sizing: border-box; 
+    width: 300px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:9;
+}
+#section .history .hi_text > li:nth-of-type(2){
+    position:absolute; z-index:7;
+    top:416px; left:324px;
+}
+#section .history .hi_text > li:nth-of-type(2):hover{
+    box-sizing: border-box; 
+    width: 350px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:10;
+}
+#section .history .hi_text > li:nth-of-type(3){
+    position:absolute; z-index:6;
+    top:362px; left:574px;
+}
+#section .history .hi_text > li:nth-of-type(3):hover{
+    box-sizing: border-box; 
+    width: 300px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:11;
+}
+#section .history .hi_text > li:nth-of-type(4){
+    position:absolute; z-index:5;
+    top:509px; left:807px;
+}
+#section .history .hi_text > li:nth-of-type(4):hover{
+    box-sizing: border-box; 
+    width: 380px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:12;
+}
+#section .history .hi_text > li:nth-of-type(5){
+    position:absolute; z-index:4;
+    top:420px; left:1105px;
+}
+#section .history .hi_text > li:nth-of-type(5):hover{
+    box-sizing: border-box; 
+    width: 300px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:13;
+}
+#section .history .hi_text > li:nth-of-type(6){
+    position:absolute; z-index:3;
+    top:380px; left:1335px;
+}
+#section .history .hi_text > li:nth-of-type(6):hover{
+    box-sizing: border-box; 
+    width: 350px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5);
+    transition: all 1s ease;
+    z-index:14;
+}
+#section .history .hi_text > li:nth-of-type(7){
+    position:absolute; z-index:2;
+    top:335px; left:1602px;
+}
+#section .history .hi_text > li:nth-of-type(7):hover{
+    box-sizing: border-box; 
+    width: 300px; padding: 30px;
+    background-color: white;
+    border: 1px solid rgba(208, 126, 126, 1);
+    justify-content: center;
+    transform: scale(1.5) translateX(-50px);
+    transition: all 1s ease;
+    z-index:15;
+}
+
+
+
+/* 파스쿠찌 로고 */
+#section .logo{
+    width: 100%; height: 1080px;
+    background-image: url(../img/heritage/logo_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgba(68, 10, 10, 1);
+}
+#section .logo .lo_text{
+    text-align: right;
+    padding-top: 105px; margin-right: 97px;
+}
+#section .logo .lo_text h1{
+    font-size: 35px;
+    font-weight: 400;
+}
+#section .logo .lo_text p{
+    font-size: 26px;
+    font-weight: 300;
+}
+#section .logo .he_logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+
+/* 전 세계 매장 현황 */
+#section .distribution{
+    width: 100%; height: 1080px;
+    position: relative;
+}
+#section .distribution .di_text{
+    position:absolute; z-index:4;
+    color: rgba(68, 10, 10, 1);
+    margin-top:105px; margin-left:97px;
+}
+#section .distribution .di_text h1{
+    font-size: 35px;
+    font-weight: 400;
+}
+#section .distribution .di_text p{
+    font-size: 26px;
+    font-weight: 300;
+}
+#section .distribution .di_map .map{position:absolute; top:63%; left:58%; transform: translate(-63%, -58%); z-index:1;}
+#section .distribution .di_map .country{color: rgba(158, 139, 118, 1);}
+#section .distribution .di_map .country p{font-size: 13px; font-weight: 400; line-height: 1px;}
+#section .distribution .di_map .country h2{font-size: 35px; font-weight: 900;}
+/* 한국 */
+#section .distribution .di_map .country > li:nth-of-type(1){
+    position:absolute; top:399px; left:815px; z-index:9; 
+}
+#section .distribution .di_map .country > li:nth-of-type(1) p{padding-left: 18px;}
+#section .distribution .di_map .country > li:nth-of-type(1) h2{padding-left: 18px; color: rgba(176, 30, 30, 1);}
+#section .distribution .di_map .country > li:nth-of-type(1):hover .co_text{
+    transform: scale(1.5);
+    transition: all 0.7s ease;
+}
+/* 일본 */
+#section .distribution .di_map .country > li:nth-of-type(2){
+    position:absolute; top:565px; left:840px; z-index:8; 
+}
+#section .distribution .di_map .country > li:nth-of-type(2) p{padding-left: 65px; margin-top: -36px;}
+#section .distribution .di_map .country > li:nth-of-type(2) h2{padding-left: 65px;}
+#section .distribution .di_map .country > li:nth-of-type(2):hover .co_text{
+    transform: scale(1.5) translateX(-10px);
+    transition: all 0.7s ease;
+}
+/* 중국 */
+#section .distribution .di_map .country > li:nth-of-type(3){
+    position:absolute; top:450px; left:750px; z-index:7; 
+}
+
+#section .distribution .di_map .country > li:nth-of-type(3) p{margin-left: -17px;}
+#section .distribution .di_map .country > li:nth-of-type(3) h2{margin-left: -17px;}
+#section .distribution .di_map .country > li:nth-of-type(3):hover .co_text{
+    transform: scale(1.5);
+    transition: all 0.7s ease;
+}
+/* 이탈리아 */
+#section .distribution .di_map .country > li:nth-of-type(4){
+    position:absolute; top:540px; left:429px; z-index:6; 
+}
+#section .distribution .di_map .country > li:nth-of-type(4) p{margin-left: -45px; margin-top: -25px;}
+#section .distribution .di_map .country > li:nth-of-type(4) h2{margin-left: -45px;}
+#section .distribution .di_map .country > li:nth-of-type(4):hover .co_text{
+    transform: scale(1.5) translateX(10px);
+    transition: all 0.7s ease;
+}
+/* 몰타 */
+#section .distribution .di_map .country > li:nth-of-type(5){
+    position:absolute; top:560px; left:330px; z-index:5; 
+}
+#section .distribution .di_map .country > li:nth-of-type(5) p{margin-left: -30px; margin-top: -40px;}
+#section .distribution .di_map .country > li:nth-of-type(5) h2{margin-left: -30px;}
+#section .distribution .di_map .country > li:nth-of-type(5):hover .co_text{
+    transform: scale(1.5) translateX(30px);
+    transition: all 0.7s ease;
+}
+/* 오스트리아 */
+#section .distribution .di_map .country > li:nth-of-type(6){
+    position:absolute; top:452px; left:492px; z-index:4; 
+}
+#section .distribution .di_map .country > li:nth-of-type(6) p{margin-left: -7px;}
+#section .distribution .di_map .country > li:nth-of-type(6) h2{margin-left: -7px;}
+#section .distribution .di_map .country > li:nth-of-type(6):hover .co_text{
+    transform: scale(1.5);
+    transition: all 0.7s ease;
+}
+/* 말바니아 */
+#section .distribution .di_map .country > li:nth-of-type(7){
+    position:absolute; top:550px; left:517px; z-index:3; 
+}
+#section .distribution .di_map .country > li:nth-of-type(7) p{margin-left: -7px; margin-top: 10px;}
+#section .distribution .di_map .country > li:nth-of-type(7) h2{margin-left: -7px;}
+#section .distribution .di_map .country > li:nth-of-type(7):hover .co_text{
+    transform: scale(1.5) translateY(10px);
+    transition: all 0.7s ease;
+}
+/* 키프로스 */
+#section .distribution .di_map .country > li:nth-of-type(8){
+    position:absolute; top:552px; left:540px; z-index:2; 
+}
+#section .distribution .di_map .country > li:nth-of-type(8) p{margin-left: -7px; margin-top: 10px;}
+#section .distribution .di_map .country > li:nth-of-type(8) h2{margin-left: -7px;}
+#section .distribution .di_map .country > li:nth-of-type(8):hover .co_text{
+    transform: scale(1.5) translateY(10px);
+    transition: all 0.7s ease;
+}
+
+#footer{
+    width: 100%; height: 434px;
+    background-color: rgba(217, 182, 148, 1);
+    color: rgba(108, 47, 37, 1);
+}
+#footer .fo_logo{padding-top: 66px; padding-left: 198px;}
+#footer .fo_main{
+    display: flex;
+    margin-top: 28px;
+    margin-left: 206px;
+    font-size: 18px;
+}
+#footer .fo_main ul{
+    display: flex;
+    font-weight: 500;
+}
+#footer .fo_main{
+    font-weight: 700;
+}
+#footer .fo_main ul :nth-child(n+2){margin-left: 60px;}
+#footer .fo_main p{   
+    box-sizing: border-box;
+    border: 2px solid rgba(134, 84, 67, 1);
+    width: 188px; height: 38px;
+    margin-left: 206px;
+    margin-top: -11px;
+    text-align: center;
+    line-height: 37px;
+}
+#footer .fo_main p:hover{
+    background-color: rgb(131, 89, 60);
+}
+#footer .fo_main p:hover a{
+    color: #e7bc94;
+}
+#footer .fo_main p a{
+    color: rgba(108, 47, 37, 1);
+}
+#footer .fo_serve{
+    color: rgba(108, 47, 37, 1);
+    margin-top: 70px;
+    margin-left: 206px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+
+/* 반응형 */
+@media all and (min-width: 769px) and (max-width: 1024px){
+
+    /* 모든 글씨 크기는 약 52%로 줄었습니다 */
+
+    /* 이탈리아의 감각을 담은 파스쿠찌 */
+    #section .brand{height: 561px;}
+    #section .brand .br_text{margin-top:54px; margin-left:50px;}
+    #section .brand .br_text :first-child{font-size: 18px;}
+    #section .brand .br_text h1{font-size: 46px;}
+    #section .brand .br_text :last-child{font-size: 13px;}
+    #section .brand .br_images .coffee img{width: 293px;}
+    #section .brand .br_images .triangle img{width: 384px;}
+    #section .brand .br_images .coffee{top:65px; left:609px;}
+#section .brand .br_images .triangle{top:148px; left:565px;}
+
+    /* 파스쿠찌 역사 */
+    #section .history{height: 561px;}
+    #section .history h1{
+        font-size: 20px;
+        top: 54px;
+    }
+    #section .history .hi_text li h2{font-size: 8px;}
+    #section .history .hi_text li span{font-size: 8px;}
+    #section .history .hi_text li p{font-size: 8px;}
+    #section .history .hi_images img{width: 790px;}
+    #section .history .hi_images{top:69%; left:66%; transform: translate(-69%, -66%);}
+    #section .history .hi_text > li:nth-of-type(1){top:156px; left:108px;}
+    #section .history .hi_text > li:nth-of-type(1):hover{width: 156px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(2){top:216px; left:205px;}
+    #section .history .hi_text > li:nth-of-type(2):hover{width: 182px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(3){top:188px; left:336px;}
+    #section .history .hi_text > li:nth-of-type(3):hover{width: 156px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(4){top:264px; left:460px;}
+    #section .history .hi_text > li:nth-of-type(4):hover{width: 185px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(5){top:218px; left:614px;}
+    #section .history .hi_text > li:nth-of-type(5):hover{width: 156px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(6){top:197px; left:734px;}
+    #section .history .hi_text > li:nth-of-type(6):hover{width: 182px; padding: 15px;}
+    #section .history .hi_text > li:nth-of-type(7){top:174px; left:873px;}
+    #section .history .hi_text > li:nth-of-type(7):hover{width: 156px; padding: 15px;}
+    
+     /* 파스쿠찌 로고 */
+    #section .logo{height: 561px;}
+    #section .logo .lo_text{padding-top: 54px;}
+    #section .logo .lo_text h1{font-size: 20px;}
+    #section .logo .lo_text p{font-size: 13px;}
+    #section .logo .he_logo img{width: 42%;}
+    #section .logo .he_logo{margin-top: 60px;}
+
+    /* 전 세계 매장 현황 */
+    #section .distribution{height: 561px;}
+    #section .distribution .di_text{margin-top:54px;}
+    #section .distribution .di_text h1{font-size: 18px;}
+    #section .distribution .di_text p{font-size: 13px;}
+    #section .distribution .di_map .map img{width: 787px;}
+    #section .distribution .di_map .country p{font-size: 6px; font-weight: 300; line-height: 1px;}
+    #section .distribution .di_map .country h2{font-size: 18px; font-weight: 900;}
+
+    /* 한국 */
+    #section .distribution .di_map .country > li:nth-of-type(1){top:198px; left:402px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) p{padding-left: 10px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) h2{padding-left: 10px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) img{width: 27px;}
+    /* 일본 */
+    #section .distribution .di_map .country > li:nth-of-type(2){top:289px; left:409px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) p{margin-top: -28px;padding-left: 35px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) h2{padding-left: 35px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) img{width: 31px;}
+    #section .distribution .di_map .country > li:nth-of-type(2):hover .co_text{
+        transform: scale(1.5) translateX(-6px);
+        transition: all 0.7s ease;
+    }
+    /* 중국 */
+    #section .distribution .di_map .country > li:nth-of-type(3){top:234px; left:362px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) p{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) h2{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) img{width: 4px;}
+    /* 이탈리아 */
+    #section .distribution .di_map .country > li:nth-of-type(4){top:264px; left:163px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) p{margin-left: -25px; margin-top: -13px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) h2{margin-left: -25px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) img{width: 38px;}
+    #section .distribution .di_map .country > li:nth-of-type(4):hover .co_text{
+        transform: scale(1.5) translateX(8px) translateY(3px);
+        transition: all 0.7s ease;
+    }
+    /* 몰타 */
+    #section .distribution .di_map .country > li:nth-of-type(5){top:278px; left:110px;}
+    #section .distribution .di_map .country > li:nth-of-type(5) p{margin-left: -12px; margin-top: -28px;}
+    #section .distribution .di_map .country > li:nth-of-type(5) h2{margin-left: -12px;}
+    #section .distribution .di_map .country > li:nth-of-type(5):hover .co_text{
+        transform: scale(1.5) translateX(10px);
+        transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(5) img{width: 75px;}
+    /* 오스트리아 */
+    #section .distribution .di_map .country > li:nth-of-type(6){top:222px; left:201px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) p{margin-left: -2px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) h2{margin-left: -2px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) img{width: 3px;}
+    /* 말바니아 */
+    #section .distribution .di_map .country > li:nth-of-type(7){top:273px; left:213px;}
+    #section .distribution .di_map .country > li:nth-of-type(7) p{margin-left: -7px; margin-top: 5px;}
+    #section .distribution .di_map .country > li:nth-of-type(7) h2{margin-left: -7px;}
+    #section .distribution .di_map .country > li:nth-of-type(7):hover .co_text{
+    transform: scale(1.5) translateY(5px);
+    transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(7) img{width: 3px;}
+    /* 키프로스 */
+    #section .distribution .di_map .country > li:nth-of-type(8){top:275px; left:230px;}
+    #section .distribution .di_map .country > li:nth-of-type(8) p{margin-left: -5px; margin-top: 5px;}
+    #section .distribution .di_map .country > li:nth-of-type(8) h2{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(8):hover .co_text{
+    transform: scale(1.5) translateY(2px);
+    transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(8) img{width: 3px;}
+}
+
+@media all and (max-width: 768px){
+
+    /* 이탈리아의 감각을 담은 파스쿠찌 */
+    #section .brand{height: 732px;}
+    #section .brand .br_text{margin-top:54px; margin-left:50px;}
+    #section .brand .br_text :first-child{font-size: 18px;}
+    #section .brand .br_text h1{font-size: 46px; }
+    #section .brand .br_text :last-child{font-size: 13px;}
+    #section .brand .br_images .coffee img{width: 293px;}
+    #section .brand .br_images .triangle img{width: 384px;}
+    #section .brand .br_images .coffee{top:248px; left:376px;}
+#section .brand .br_images .triangle{top:324px; left:330px;}
+
+    /* 파스쿠찌 역사 */
+    #section .history{height: 784px;}
+    #section .history h1{
+        font-size: 20px;
+        top: 54px;
+    }
+    #section .history .hi_text li h2{font-size: 8px;}
+    #section .history .hi_text li span{font-size: 8px;}
+    #section .history .hi_text li p{font-size: 8px;}
+    #section .history .hi_images{top:54%; left:33%;}
+    #section .history .hi_images img{
+        width: 605px;
+        rotate: 90deg;
+    }
+    #section .history .hi_text > li:nth-of-type(1){top:110px; left:260px;}
+    #section .history .hi_text > li:nth-of-type(1):hover{width: 160px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(2){top:188px; left:136px;}
+    #section .history .hi_text > li:nth-of-type(2):hover{width: 188px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(3){top:290px; left:213px;}
+    #section .history .hi_text > li:nth-of-type(3):hover{width: 200px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(4){top:394px; left:309px;}
+    #section .history .hi_text > li:nth-of-type(4):hover{width: 210px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(5){top:502px; left:232px;}
+    #section .history .hi_text > li:nth-of-type(5):hover{width: 190px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(6){top:609px; left:215px;}
+    #section .history .hi_text > li:nth-of-type(6):hover{width: 200px; padding: 15px;}
+
+    #section .history .hi_text > li:nth-of-type(7){top: 692px; left:356px;}
+    #section .history .hi_text > li:nth-of-type(7):hover{width: 190px; padding: 15px;}
+    
+     /* 파스쿠찌 로고 */
+    #section .logo{height: 561px;}
+    #section .logo .lo_text{padding-top: 54px;}
+    #section .logo .lo_text h1{font-size: 20px;}
+    #section .logo .lo_text p{font-size: 13px;}
+    #section .logo .he_logo img{width: 42%;}
+    #section .logo .he_logo{margin-top: 95px;}
+
+    /* 전 세계 매장 현황 */
+    #section .distribution{height: 561px;}
+    #section .distribution .di_text{margin-top:54px;}
+    #section .distribution .di_text h1{font-size: 18px;}
+    #section .distribution .di_text p{font-size: 13px;}
+    #section .distribution .di_map .map img{width: 594px;}
+    #section .distribution .di_map .country p{font-size: 6px; font-weight: 300; line-height: 1px;}
+    #section .distribution .di_map .country h2{font-size: 18px; font-weight: 900;}
+
+    /* 한국 */
+    #section .distribution .di_map .country > li:nth-of-type(1){top:215px; left:299px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) p{padding-left: 10px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) h2{padding-left: 10px;}
+    #section .distribution .di_map .country > li:nth-of-type(1) img{width: 27px;}
+    /* 일본 */
+    #section .distribution .di_map .country > li:nth-of-type(2){top:299px; left:309px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) p{margin-top: -28px;padding-left: 35px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) h2{padding-left: 35px;}
+    #section .distribution .di_map .country > li:nth-of-type(2) img{width: 31px;}
+    #section .distribution .di_map .country > li:nth-of-type(2):hover .co_text{
+        transform: scale(1.5) translateX(-6px);
+        transition: all 0.7s ease;
+    }
+    /* 중국 */
+    #section .distribution .di_map .country > li:nth-of-type(3){top:240px; left:265px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) p{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) h2{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(3) img{width: 4px;}
+    /* 이탈리아 */
+    #section .distribution .di_map .country > li:nth-of-type(4){top:284px; left:108px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) p{margin-left: -25px; margin-top: -13px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) h2{margin-left: -25px;}
+    #section .distribution .di_map .country > li:nth-of-type(4) img{width: 38px;}
+    #section .distribution .di_map .country > li:nth-of-type(4):hover .co_text{
+        transform: scale(1.5) translateX(8px) translateY(3px);
+        transition: all 0.7s ease;
+    }
+    /* 몰타 */
+    #section .distribution .di_map .country > li:nth-of-type(5){top:297px; left:60px;}
+    #section .distribution .di_map .country > li:nth-of-type(5) p{margin-left: -12px; margin-top: -28px;}
+    #section .distribution .di_map .country > li:nth-of-type(5) h2{margin-left: -12px;}
+    #section .distribution .di_map .country > li:nth-of-type(5):hover .co_text{
+        transform: scale(1.5) translateX(10px);
+        transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(5) img{width: 75px;}
+    /* 오스트리아 */
+    #section .distribution .di_map .country > li:nth-of-type(6){top:234px; left:145px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) p{margin-left: -2px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) h2{margin-left: -2px;}
+    #section .distribution .di_map .country > li:nth-of-type(6) img{width: 3px;}
+    /* 말바니아 */
+    #section .distribution .di_map .country > li:nth-of-type(7){top:289px; left:155px;}
+    #section .distribution .di_map .country > li:nth-of-type(7) p{margin-left: -7px; margin-top: 5px;}
+    #section .distribution .di_map .country > li:nth-of-type(7) h2{margin-left: -7px;}
+    #section .distribution .di_map .country > li:nth-of-type(7):hover .co_text{
+    transform: scale(1.5) translateY(5px);
+    transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(7) img{width: 3px;}
+    /* 키프로스 */
+    #section .distribution .di_map .country > li:nth-of-type(8){top:290px; left:170px;}
+    #section .distribution .di_map .country > li:nth-of-type(8) p{margin-left: -5px; margin-top: 5px;}
+    #section .distribution .di_map .country > li:nth-of-type(8) h2{margin-left: -5px;}
+    #section .distribution .di_map .country > li:nth-of-type(8):hover .co_text{
+    transform: scale(1.5) translateY(2px);
+    transition: all 0.7s ease;
+    }
+    #section .distribution .di_map .country > li:nth-of-type(8) img{width: 3px;}
+}

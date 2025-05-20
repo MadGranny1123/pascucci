@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>파스쿠찌 메인페이지</title>
+  <script src="https://kit.fontawesome.com/59ad5dcdc7.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/pscc.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".tab_menu>li").click(function(){
+        let list = $(this).index();
+        $(".show_desc>li").hide();
+        $(".show_desc>li").eq(list).show();
+
+        $(".hv_scale>li").hide();
+        $(".hv_scale>li").eq(list).show();
+
+        $(".tab_menu>li").removeClass("active");
+        $(".tab_menu>li").eq(list).addClass("active");
+      });
+
+      // -------------광고배너-----------------
+      let i = 0;
+      let count = $(".adbanner>li").length;
+
+      $(".next").click(function(){  
+          if(i == count-1){
+            i = 0;
+          }else{
+            i++;
+          }
+          $(".adbanner>li").stop().fadeOut();
+          $(".adbanner>li").eq(i).stop().fadeIn();
+      });
+
+      $(".prev").click(function(){
+        if(i == 0){
+          i = count-1;
+        }else{
+          i--;
+        }
+        $(".adbanner>li").stop().fadeOut();
+        $(".adbanner>li").eq(i).stop().fadeIn();
+      });
+      
+
+      let autoFade = setInterval(function(){
+        if(i == count-1){
+            i = 0;
+          }else{
+            i++;
+          }
+          $(".adbanner>li").stop().fadeOut();
+          $(".adbanner>li").eq(i).stop().fadeIn();
+      }, 2000);
+      $(".newsevent").mouseenter(function(){
+        clearInterval(autoFade);
+      });
+      $(".newsevent").mouseleave(function(){
+        autoFade = setInterval(function(){
+        if(i == count-1){
+            i = 0;
+          }else{
+            i++;
+          }
+          $(".adbanner>li").stop().fadeOut();
+          $(".adbanner>li").eq(i).stop().fadeIn();
+      }, 2000);
+      });
+
+      $(".top_btn").click(function(){
+        $('html, body').stop().animate({scrollTop : 0}, 500);
+      });
+
+    });
+  </script>
+
+</head>
+<body>
+  <div id="header">
+    <div class="drop_menu">
+      <div class="menu">
+        <h1 class="logo"><img src="img/main/logo1.png" alt="logo"></h1>
+        <ul class="gnb">
+          <li><a href="#">PASCUCCI</a>
+            <ul class="sub">
+              <li><a href="heritage.html">헤리티지</a></li>
+              <li><a href="#">브랜드 스토리</a></li>
+              <li><a href="#">메뉴 스토리</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">MENU</a>
+            <ul class="sub">
+              <li><a href="#">커피</a>
+                <!-- <ul class="sub_menu">
+                  <li><a href="#">이탈리안커피</a></li>
+                  <li><a href="#">커피(hot)</a></li>
+                  <li><a href="#">커피(iced)</a></li>
+                  <li><a href="#">콜드브루</a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">음료</a>
+                <!-- <ul class="sub_menu">
+                  <li><a href="#">시즌음료</a></li>
+                  <li><a href="#">그라니따</a></li>
+                  <li><a href="#">티</a></li>
+                  <li><a href="#">기타음료</a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">케이크</a>
+                <!-- <ul class="sub_menu">
+                  <li><a href="#">조각케이크</a></li>
+                  <li><a href="#">홀케이크</a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">푸드</a>
+                <!-- <ul class="sub_menu">
+                  <li><a href="#">젤라또</a></li>
+                  <li><a href="#">델리</a></li>
+                  <li><a href="#">브레드</a></li>
+                  <li><a href="#">디저트</a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">상품</a>
+                <!-- <ul class="sub_menu">
+                  <li><a href="#">원두</a></li>
+                  <li><a href="#">티</a></li>
+                  <li><a href="#">텀블러</a></li>
+                  <li><a href="#">머그</a></li>
+                  <li><a href="#">기타상품</a></li>
+                </ul> -->
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">STORE</a>
+            <ul class="sub">
+              <li><a href="#">매장안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">EVENT</a>
+            <ul class="sub">
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">이벤트</a></li>
+              <li><a href="#">파스쿠찌Talk</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">CONTACT</a>
+            <ul class="sub">
+              <li><a href="#">제휴안내</a></li>
+              <li><a href="#">자주하는질문</a></li>
+              <li><a href="#">1:1문의하기</a></li>
+              <li><a href="#">채용안내</a></li>
+              <li><a href="#">가맹사업안내</a></li>
+            </ul>
+          </li>
+        </ul>
+        <p>가맹사업안내</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="section">
+    <div class="sec1">
+      <div class="main_txt">
+        <p class="since">SINCE 1883</p>
+        <p class="long">141년의 긴 세월에 걸쳐 <br>
+          이탈리아의 풍미가 담긴 맛과 센스를 전합니다.</p>
+        <div class="main_line"></div>
+        <h2>"당신의 가장 가까운 곳에서 <br>
+          꿈꾸던 이탈리아를 만나보세요."</h2>
+      </div>
+      <div class="main_button">
+        <a href="heritage.html">
+          <p>자세히 보기</p>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="sec2">
+      <div class="red_bg">
+        <h1 class="recmd">이탈리아의 일상 추천 메뉴</h1>
+        <ul class="tab_menu">
+          <li class="active">Morning Coffee Time</li> 
+          <li>Afternoon Coffee Time</li>
+          <li>Evening Coffee Time</li>
+        </ul>
+      </div>
+      <div class="tab_show">
+        <ul class="show_prodcts">
+          <li class="hv_img">
+            <ul class="hv_scale">
+              <li><img src="img/main/tab_moning_h.png" alt=""></li>
+              <li><img src="img/main/tab_after_h.png" alt=""></li>
+              <li><img src="img/main/evening_h.png" alt=""></li>
+            </ul>
+          </li>
+          <li class="right_cont">
+            <ul class="show_desc">
+              <li>
+                <h3>에소플(Espresso plate)</h3>
+                <p>싱글 에스프레소와 다채로운 <br>
+                  베리에이션 음료를 선택하여 맛볼 수<br>
+                  있는 시그니처 세트</p>
+                <img src="img/main/tab_morning.png" alt="">
+              </li>
+
+              <li>
+                <h3>젤라또 카페라떼</h3>
+                <p>에스프레소와 바닐라빈 시럽을 조합한<br>
+                  아이스 카페라떼에 시그니처 젤라또가<br>
+                  어우러진 플로팅 카페라떼</p>
+                <img src="img/main/tab_afternoon.png" alt="">
+              </li>
+              <li>
+                <h3>허니 크림 깔루아 밀크</h3>
+                <p>커피 리큐르 깔루아와 파스쿠찌의<br>
+                에스프레소, 시그니처 허니 크림이<br>
+                어우러져 부드럽고 달콤하게 즐기는<br>
+                커피 칵테일</p>
+                <img src="img/main/tab_evening.png" alt="">
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- -------------------sec33333333333-------------- -->
+    <div class="sec3">
+      <div class="signature">
+        <h1>PASCUCCI’S SIGNATURE</h1>
+        <h4>파스쿠찌 시그니처 메뉴</h4>
+        <ul class="sig_cake">
+            <li><a href="">
+                <img src="img/main/berrytira.png" alt="">
+                <div>
+                    <p>카사타 티라미수 딸기(조각)</p><p><span>Cassata Strawberry  Tiramisu</span></p>
+                </div>
+            </a></li>
+            <li><a href="">
+                <img src="img/main/tira.png" alt="">
+                <div>
+                    <p>카사타 티라미수(조각)</p><p><span>Cassata Tiramisu</span></p>
+                </div>
+            </a></li>
+            <li><a href="">
+                <img src="img/main/white.png" alt="">
+                <div>
+                    <p>오! 마이 화이트(조각)</p><p><span>Cassata Strawberry  Tiramisu</span></p>
+                </div>
+            </a></li>
+            <li><a href="">
+                <img src="img/main/choch.png" alt="">
+                <div>
+                    <p>오! 마이 초코(조각)</p><p><span>Oh! My Chocolate cake</span></p>
+                </div>
+            </a></li>
+        </ul>
+    </div>
+    </div>
+    <!-- --------------sec4_news--------------- -->
+    <div class="sec4">
+      <div class="left_img">
+        <img src="img/main/news01.jpg" alt="">
+      </div>
+      <div class="newsevent">
+        <ul class="adbanner">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="ad_btn">
+          <li class="prev"><i class="fa-solid fa-chevron-left"></i></li>
+          <li class="next"><i class="fa-solid fa-chevron-right"></i></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ------------------sec5---------------------- -->
+    <div class="sec5">
+      <h1 class="sns">
+        <img src="img/main/insta.png" alt="">
+        pascucci_kr</h1>
+      <ul class="instapics">
+        <li><a href="#"><img src="img/main/instanew01.jpg" alt=""></a></li>
+        <li><a href="#"><img src="img/main/instanew02.jpg" alt=""></a></li>
+        <li><a href="#"><img src="img/main/instanew03.jpg" alt=""></a></li>
+      </ul>
+    </div>
+
+<!-- ---------------------고정이미지--------------------- -->
+
+    <div class="franc">
+      <ul class="inform_fix">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>매장찾기</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-handshake-angle"></i>
+            <p>제휴문의</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-store"></i>
+            <p>가맹문의</p>
+          </a>
+        </li>
+      </ul>
+      <div class="top_btn">
+        <i class="fa-solid fa-angle-up"></i>
+        <p>TOP</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+<!-- ----------------footer--------------------- -->
+  <div id="footer">
+    <div class="fo_logo"><a href="index.html"><img src="img/main/footer_logo.png" alt="푸터로고"></a></div>
+        <div class="fo_main">
+            <ul>
+                <li><a href="#">해피포인트</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">안전보건경영방침</a></li>
+                <li><a href="#">윤리신고센터</a></li>
+                <li><a href="#">거래희망사전등록</a></li>
+                <li><a href="#">고정형 영상정보처리기기  운영 및 관리방침</a></li>
+            </ul>
+            <p><a href="#">패밀리 사이트 바로가기</a></p>
+        </div>
+        <p class="fo_serve">
+          (주) 파리크라상사업자등록 번호: 129-81-07244<br>
+          경기도 성남시 중원구 사기막골로31번길 18 고객상담센터 080-731-2027<br>
+          ALL RIGHTS RESERVED ⓒ 2016 THE PASCUCCI, PARIS CROISSANT CO., LTD.
+        </p>
+  </div>
+</body>
+</html>
