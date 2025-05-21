@@ -213,12 +213,16 @@ body{font-family: 'Pretendard';}
 
 #section .sec2 .tab_show .hv_img .hv_scale>li{
   position: absolute; 
-  left: 650px; bottom: 250px;
+  left: 720px; bottom: 250px;
   transition: all 0.5s;
   cursor: pointer;
   display: none;
   transition: all 0.3s;
   transform: scale(1.2);
+}
+#section .sec2 .tab_show .hv_img .hv_scale>li:nth-child(2),
+#section .sec2 .tab_show .hv_img .hv_scale>li:nth-child(3){
+  margin-left: 50px;
 }
 #section .sec2 .tab_show .hv_img .hv_scale li:hover{
   transform: scale(1.5);
