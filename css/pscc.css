@@ -190,7 +190,7 @@ body{font-family: 'Pretendard';}
   position: absolute; left: 0; top: 0;
   box-sizing: border-box;
   padding-left: 200px;
-  padding-top: 200px;
+  padding-top: 150px;
   color: #e7bc94;
 }
 #section .sec2 .red_bg h1{
@@ -236,7 +236,7 @@ body{font-family: 'Pretendard';}
   width: 700px; margin: 0 auto;
   height: 600px;
   position: absolute;
-  right: 100px; bottom: -50px;
+  right: 100px; bottom: 50px;
   text-align: center;
 }
 #section .sec2 .tab_show .right_cont .show_desc>li{
@@ -254,7 +254,7 @@ body{font-family: 'Pretendard';}
 }
 
 #section .sec2 .tab_show .right_cont .show_desc>li img{
-  transform: scale(0.7);
+  transform: scale(0.8) translateY(-50px);
 }
 
 
