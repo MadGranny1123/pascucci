@@ -219,7 +219,6 @@ body{font-family: 'Pretendard';}
   display: none;
   transition: all 0.3s;
   transform: scale(1.2);
-  border:1px solid red;
 }
 #section .sec2 .tab_show .hv_img .hv_scale>li:nth-child(2),
 #section .sec2 .tab_show .hv_img .hv_scale>li:nth-child(3){
